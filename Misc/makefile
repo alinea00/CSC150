@@ -11,10 +11,10 @@ hello.o : hello.c
 	$(CC) $(CFLAGS) hello.c
 
 clean:
-	\rm *.o *.exe *.tar
+	\rm *.o *.exe *.tar.gz
 
 run:
 	.\hello
 
 tar:
-	tar cfv hello.tar makefile hello.c
+	tar cvzf hello.tar.gz makefile hello.c

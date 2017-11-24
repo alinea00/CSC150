@@ -1,5 +1,3 @@
-// compile: gcc hello.c -o hello.exe
-
 #include <stdio.h>
 
 int main()
