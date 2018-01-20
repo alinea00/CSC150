@@ -11,14 +11,19 @@
  ****************************************************/
 int main()
 {
+    int first = 0; 
+    int second = 0;
+    
     printf("Enter the first interger:\t");
+    scanf("%d", &first);
     printf("Enter the second interger:\t");
+    scanf("%d", &second);
     printf("\n");
-    printf("The sum is:\t");
-    printf("The difference is:\t");
-    printf("The product is:\t");
-    printf("The quotient is:\t");
-    printf("The remainder is:\t");
+    printf("The sum is:\t%d", first + second);
+    printf("The difference is:\t%d", first - second);
+    printf("The product is:\t%d", first * second);
+    printf("The quotient is:\t%d", first / second);
+    printf("The remainder is:\t%d", first % second);
 
     // return success code
     return 0;
