@@ -11,19 +11,20 @@
  ****************************************************/
 int main()
 {
-    int first = 0; 
+    // Declare and initialize variables 
+    int first = 0;    
     int second = 0;
     
-    printf("Enter the first interger:\t");
-    scanf("%d", &first);
-    printf("Enter the second interger:\t");
-    scanf("%d", &second);
-    printf("\n");
-    printf("The sum is:\t\t\t%d\n", first + second);
-    printf("The difference is:\t\t%d\n", first - second);
-    printf("The product is:\t\t\t%d\n", first * second);
-    printf("The quotient is:\t\t%d\n", first / second);
-    printf("The remainder is:\t\t%d\n", first % second);
+    printf("Enter the first integer:\t");                   // Prompt for first integer
+    scanf("%d", &first);                                    // Input first integer
+    printf("Enter the second integer:\t");                  // Prompt for second integer
+    scanf("%d", &second);                                   // Input second integer
+    printf("\n");                                           // Blank space for readability       
+    printf("The sum is:\t\t\t%d\n", first + second);        // Output sum
+    printf("The difference is:\t\t%d\n", first - second);   // Output difference
+    printf("The product is:\t\t\t%d\n", first * second);    // Output product
+    printf("The quotient is:\t\t%d\n", first / second);     // Output quotient
+    printf("The remainder is:\t\t%d\n", first % second);    // Output remainder 
 
     // return success code
     return 0;
