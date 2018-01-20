@@ -11,7 +11,14 @@
  ****************************************************/
 int main()
 {
-    
+    printf("Enter the first interger:\t");
+    printf("Enter the second interger:\t");
+    printf("\n");
+    printf("The sum is:\t");
+    printf("The difference is:\t");
+    printf("The product is:\t");
+    printf("The quotient is:\t");
+    printf("The remainder is:\t");
 
     // return success code
     return 0;
