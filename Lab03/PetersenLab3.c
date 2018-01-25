@@ -29,33 +29,39 @@ int main()
     scanf("%d", &third);                                        // Input third integer
     printf("\n");                                               // Blank space for readability
 
+    // Initialize smallest to first
     smallest = first; 
 
+    // Check if second is smaller and if so make it the new smallest
     if (second < smallest)
     {
         smallest = second; 
     }
 
+    // Check if third is smaller and if so make it the new smallest
     if (third < smallest)
     {
         smallest = third; 
     }
 
-     largest = first; 
+    // Initialize the largest to first
+    largest = first; 
 
+    // Check if second is larger and if so make it the new largest
     if (second > largest)
     {
         largest = second; 
     }
 
+    // Check if third is larger and if so make it the new largest
     if (third > largest)
     {
         largest = third; 
     }
 
-    sum = first + second + third;
-    product = first * second * third;
-    average = sum / 3;
+    sum = first + second + third;       // Calculate the sum of the numbers
+    product = first * second * third;   // Calculate the product of the numbers
+    average = sum / 3;                  // Calculate the average of the numbers
 
     printf("The smallest number is:\t\t%d\n", smallest);        // Output smallest number
     printf("The largest number is:\t\t%d\n", largest);          // Output largest number
