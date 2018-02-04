@@ -43,8 +43,10 @@ int main()
     float test3 = 0.0;
     float dsuTechExam = 0.0;
     float overallScore = 0.0;
-    
-   //prompt and get input for all scores
+    float totalPointsReceived = 0.0;
+    float totalPointsPossible = 650.0;
+
+   // prompt and get input for all assignments
     printf("%s", "Enter the score for Assignment 1:\t");
     scanf("%f", &assignment1);
     printf("%s", "Enter the score for Assignment 2:\t");
@@ -70,45 +72,76 @@ int main()
     printf("%s", "Enter the score for Assignment 12:\t");
     scanf("%f", &assignment12);
 
-    //get quiz scores 
-    printf("%s", "Enter the score for Quiz 1:\t");
+    // prompt and get input for all quizzes 
+    printf("%s", "Enter the score for Quiz 1:\t\t");
     scanf("%f", &quiz1);
-    printf("%s", "Enter the score for Quiz 2:\t");
+    printf("%s", "Enter the score for Quiz 2:\t\t");
     scanf("%f", &quiz2);
-    printf("%s", "Enter the score for Quiz 3:\t");
+    printf("%s", "Enter the score for Quiz 3:\t\t");
     scanf("%f", &quiz3);
-    printf("%s", "Enter the score for Quiz 4:\t");
+    printf("%s", "Enter the score for Quiz 4:\t\t");
     scanf("%f", &quiz4);
-    printf("%s", "Enter the score for Quiz 5:\t");
+    printf("%s", "Enter the score for Quiz 5:\t\t");
     scanf("%f", &quiz5);
-    printf("%s", "Enter the score for Quiz 6:\t");
+    printf("%s", "Enter the score for Quiz 6:\t\t");
     scanf("%f", &quiz6);
-    printf("%s", "Enter the score for Quiz 7:\t");
+    printf("%s", "Enter the score for Quiz 7:\t\t");
     scanf("%f", &quiz7);
-    printf("%s", "Enter the score for Quiz 8:\t");
+    printf("%s", "Enter the score for Quiz 8:\t\t");
     scanf("%f", &quiz8);
-    printf("%s", "Enter the score for Quiz 9:\t");
+    printf("%s", "Enter the score for Quiz 9:\t\t");
     scanf("%f", &quiz9);
-    printf("%s", "Enter the score for Quiz 10:\t");
+    printf("%s", "Enter the score for Quiz 10:\t\t");
     scanf("%f", &quiz10);
-    printf("%s", "Enter the score for Quiz 11:\t");
+    printf("%s", "Enter the score for Quiz 11:\t\t");
     scanf("%f", &quiz11);
 
-    // get test scores
-    printf("%s", "Enter the score for Test 1:\t");
+    // prompt and get input for all tests
+    printf("%s", "Enter the score for Test 1:\t\t");
     scanf("%f", &test1);
-    printf("%s", "Enter the score for Test 2:\t");
+    printf("%s", "Enter the score for Test 2:\t\t");
     scanf("%f", &test2);
-    printf("%s", "Enter the score for Test 3:\t");
+    printf("%s", "Enter the score for Test 3:\t\t");
     scanf("%f", &test3);
 
-    //get dsu tech scores 
+    // prompt and get input for DSU Tech exam
     printf("%s", "Enter the score for DSU Tech Exam:\t");
     scanf("%f", &dsuTechExam);
 
-    // Calculate overall score.
+    // Calculate overall score putting one statment
+    // per line for readability.
+    totalPointsReceived = assignment1
+        + assignment2
+        + assignment3
+        + assignment4
+        + assignment5
+        + assignment6
+        + assignment7
+        + assignment8
+        + assignment9
+        + assignment10
+        + assignment11
+        + assignment12
+        + quiz1
+        + quiz2
+        + quiz3
+        + quiz4
+        + quiz5
+        + quiz6
+        + quiz7
+        + quiz8
+        + quiz9
+        + quiz10
+        + quiz11
+        + test1
+        + test2
+        + test3
+        + dsuTechExam;
+    
+    overallScore = (totalPointsReceived / totalPointsPossible) * 100;
 
-    printf("The overall course grade is:\t\t%f\n", overallScore);        // Output smallest number
+    // Output course grade as a precentage
+    printf("\nThe overall course grade is:\t\t%.2f%%", overallScore);
 
     // return success code
     return 0;
