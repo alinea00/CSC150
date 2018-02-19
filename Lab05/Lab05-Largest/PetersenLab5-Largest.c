@@ -33,7 +33,7 @@ int main()
     }
   
     // Output largest number 
-    printf("\nThe larget number is: %d\n", largest);
+    printf("\nThe largest number is: %d\n", largest);
 
     // return success code
     return 0;
