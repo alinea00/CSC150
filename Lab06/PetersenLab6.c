@@ -17,16 +17,17 @@ int main()
     float totalPoints = 0.0;
     float gradeItem = 0.0;
     float finalGrade = 0.0;
+    char letterGrade = 'F';
 
     // Prompt user for number of grades to enter
     printf("How many grade items would you like to enter? ");
     scanf("%d", &numGrades);
 
     // Loop for number of grades
-    for(int i = 1; i <= numGrades; i++)
+    for(int counter = 1; counter <= numGrades; counter++)
     {
         // Prompt user for grade item
-        printf("Enter the grade for grade item number %d: ", i);
+        printf("Enter the grade for grade item number %d: ", counter);
         scanf("%f", &gradeItem);
 
         // Add grade to accumulated total of points
@@ -35,9 +36,32 @@ int main()
 
     // Calculate final grade average
     finalGrade = totalPoints / numGrades;
-    
-    // Output final grade precentage
+
+    // Calculate letter grade.  
+    if(finalGrade >= 90.0)
+    {
+        letterGrade = 'A';
+    }
+    else if(finalGrade >= 80.0)
+    {
+        letterGrade = 'B';
+    }
+    else if(finalGrade >= 70.0)
+    {
+        letterGrade = 'C';
+    }
+    else if(finalGrade >= 60.0)
+    {
+        letterGrade = 'D';
+    }
+    else 
+    {
+        letterGrade = 'F';
+    }
+
+    // Output final grade precentage and letter grade
     printf("\nAverage grade: %.2f%%\n", finalGrade);
+    printf("Letter grade: %c\n", letterGrade);
 
     // return success code
     return 0;
