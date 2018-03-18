@@ -18,8 +18,7 @@ int main()
     int daysPerMonth = 0.0;
     int extraExercise = 0.0;
     float ratePerDay = 0.0;
-    float monthlyCharges = 0.0;   
-    const char* extraExerciseString = "";
+    float monthlyCharges = 0.0;
 
     // Prompt user for how much their dog weighs in pounds
     printf("How many pounds does your dog weigh?:\t");
@@ -75,19 +74,14 @@ int main()
         else
         {
             ratePerDay += 2.00;
-        }
-
-        // This adds the extra exercise string for the output
-        // This is required in order to do the output in one
-        // statement instead of two using an if-else.
-        extraExerciseString = " with extra exercise"; 
+        } 
     }
 
     // Calculate monthly charges
     monthlyCharges = ratePerDay * daysPerMonth;
 
     // Output calculation description, rate per day, and monthly charges
-    printf("\nTo board a %d pound dog for %d days%s:\n", weightInPounds, daysPerMonth, extraExerciseString);
+    printf("\nTo board a %d pound dog for %d days%s:\n", weightInPounds, daysPerMonth, (extraExercise == 1 ? " with extra exercise" : ""));
     printf("Rate per day:\t\t$%.2f\n", ratePerDay);
     printf("Monthly charges:\t$%.2f\n", monthlyCharges);
 
