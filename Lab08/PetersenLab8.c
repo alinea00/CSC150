@@ -32,7 +32,53 @@ int main()
     printf("Extra exercise? (1 = yes or 2 = no)\t");
     scanf("%d", &extraExercise);
 
+    // Determine daily rate based on days per month and weight
+    if (daysPerMonth > 12)
+    {
+        if (weightInPounds < 12)
+        {
+            ratePerDay = 12.50;
+        }
+        else if (weightInPounds < 32)
+        {
+            ratePerDay = 15.00;
+        }
+        else
+        {
+            ratePerDay = 17.50;
+        }
+    }
+    else
+    {
+        if (weightInPounds < 12)
+        {
+            ratePerDay = 15.00;
+        }
+        else if (weightInPounds < 32)
+        {
+            ratePerDay = 17.50;
+        }
+        else
+        {
+            ratePerDay = 20.00;
+        }
+    }
+    
+    // Add charges for extra exercise if requested
+    if (extraExercise == 1)
+    {
+        if (weightInPounds > 20)
+        {
+            ratePerDay += 4.00;
+        }
+        else
+        {
+            ratePerDay += 2.00;
+        }
+    }
 
+    // Calculate monthly charges
+    monthlyCharges = ratePerDay * daysPerMonth;
 
     // Output calculation description, rate per day, and monthly charges
     printf("\nTo board a %d pound dog for %d days:\n", weightInPounds, daysPerMonth);
