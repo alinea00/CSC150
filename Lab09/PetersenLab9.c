@@ -18,21 +18,29 @@ int main()
     double liters = 0.0;
     double gallons = 0.0;
 
+    // Prints headers for liters to gallons
     printf("Liters converted to gallons:\n");
     printf("Liters\tGallons\n");
     
+    // Output table for liters to gallons
     for (int litersCounter = 100; litersCounter >= 0; litersCounter -= 5)
     {   
+        // Call conversion function and output results
         gallons = convertLitersToGallons(litersCounter);
+
         printf("%d\t%.1f\n", litersCounter, gallons);
     }
 
+    // Prints headers for gallons to liters
     printf("\nGallons converted to liters:\n");
     printf("Gallons\tLiters\n");
 
+    // Output table for gallons to liters
     for (int gallonsCounter = 30; gallonsCounter >= 0; gallonsCounter -= 2)
     {
+       // Call conversion function and output results
        liters = convertGallonsToLiters(gallonsCounter);
+
        printf("%d\t%.1f\n", gallonsCounter, liters); 
     }
 
