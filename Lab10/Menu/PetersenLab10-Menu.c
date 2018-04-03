@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 // Function prototypes
-
+void printName();
+void printSquares();
 
 /***************************************************************
  * Author: Heather Petersen
@@ -28,16 +29,35 @@ int main()
         scanf("%d", &menuChoice);
     }
     
+    switch(menuChoice)
+    {
+        case 1:
+            printName();
+            break;
+        case 2:
+            printSquares();
+            break;
+    }
     
     // return success code
     return 0;
 }
 
 /***************************************************************
- * This function converts gallons to liters.
+ * This function prints my name five times.
  ***************************************************************/
-
+void printName()
+{
+    for (int counter = 0; counter < 5; counter ++)
+    {
+        printf("Hi, my name is Heather.\n");
+    }
+}
 
 /***************************************************************
- * This function converts liters to gallons.
+ * This function prints the squares from 12 to 0.
  ***************************************************************/
+void printSquares()
+{
+
+}
