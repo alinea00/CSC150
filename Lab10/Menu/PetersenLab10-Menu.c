@@ -18,7 +18,7 @@ int main()
     // Declare and initialize variables    
     int menuChoice = 0;
 
-    // Prints headers for liters to gallons
+    // Prints menu and gets choice
     while (menuChoice != 1 && menuChoice != 2)
     {
         printf("What would you like to do?\n");
@@ -27,8 +27,11 @@ int main()
         printf("\nChoice: ");
 
         scanf("%d", &menuChoice);
+
+        printf("\n");
     }
     
+    // Handles menu choice by calling appropriate function
     switch(menuChoice)
     {
         case 1:
@@ -48,7 +51,7 @@ int main()
  ***************************************************************/
 void printName()
 {
-    for (int counter = 0; counter < 5; counter ++)
+    for (int counter = 0; counter < 5; counter++)
     {
         printf("Hi, my name is Heather.\n");
     }
@@ -59,5 +62,8 @@ void printName()
  ***************************************************************/
 void printSquares()
 {
-
+    for (int counter = 12; counter >= 0; counter--)
+    {
+        printf("%d x %d = %d\n", counter, counter, counter * counter);
+    }
 }
