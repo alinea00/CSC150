@@ -51,7 +51,7 @@ int main()
     // Calculate average, letter grade, then output them
     average = (float)(totalGrades / NUM_GRADES);
     letterGrade = calculateLetterGrade(average);
-    printf("\nGrade average of the %d grades: %.1f - %c", NUM_GRADES, average, letterGrade);
+    printf("\nGrade average of the %d grades: %.1f%% - %c", NUM_GRADES, average, letterGrade);
 
     // return success code
     return 0;
