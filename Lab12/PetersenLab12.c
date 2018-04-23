@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <string.h>
 
+// Define number of grades to be entered
 #define NUM_GRADES 8
 
 // Function prototypes
@@ -26,6 +26,7 @@ int main()
     float totalGrades = 0.0;
     float average = 0.0;
 
+    // Prompt for each grade and add it to the total
     for (int i = 0; i < NUM_GRADES; i++)
     {
         printf("Enter grade %d: ", i + 1);
@@ -34,16 +35,20 @@ int main()
         totalGrades += grades[i];
     }
 
+    // Sort Array
     sortAscending(grades, NUM_GRADES);
 
+    // Print category header
     printf("\nSorted grades:\n");
 
+    // Print each grade and corresponding letter grade
     for (int i = 0; i < NUM_GRADES; i++)
     {
         letterGrade = calculateLetterGrade(grades[i]);
         printf("%3d - %c\n", grades[i], letterGrade);
     }
 
+    // Calculate average, letter grade, then output them
     average = (float)(totalGrades / NUM_GRADES);
     letterGrade = calculateLetterGrade(average);
     printf("\nGrade average of the %d grades: %.1f - %c", NUM_GRADES, average, letterGrade);
@@ -52,12 +57,19 @@ int main()
     return 0;
 }
 
+/***************************************************************
+ * This function sorts the given array using a bubble sort.
+ ***************************************************************/
 void sortAscending(unsigned int data[], unsigned int dataSize)
 {
+    // Outer loop controls number of passes
     for (unsigned int pass = 1; pass < dataSize; pass++)
     {
+        // Loop over each item in the array
         for (unsigned int i = 0; i < dataSize - 1; i++)
         {
+            // If the current element is greater than the next
+            // element, swap them.
             if (data[i] > data[i + 1])
             {
                 unsigned int temp = data[i];
@@ -68,8 +80,13 @@ void sortAscending(unsigned int data[], unsigned int dataSize)
     }
 }
 
+/***************************************************************
+ * This function determines the letter grade based on the given
+ * numeric grade.
+ ***************************************************************/
 char calculateLetterGrade(float numericGrade)
 {
+    // Declare and initialize local variable
     char letterGrade = 'F';
 
     // Calculate letter grade.  
@@ -94,5 +111,6 @@ char calculateLetterGrade(float numericGrade)
         letterGrade = 'F';
     }
 
+    // Return final result
     return letterGrade;
 }
