@@ -23,20 +23,30 @@ int main()
     // Declare and initialize variables    
     unsigned int grades[NUM_GRADES] = {0};
     char letterGrade = 'F';
+    float totalGrades = 0.0;
+    float average = 0.0;
 
     for (int i = 0; i < NUM_GRADES; i++)
     {
         printf("Enter grade %d: ", i + 1);
         scanf("%d", &grades[i]);
+
+        totalGrades += grades[i];
     }
 
     sortAscending(grades, NUM_GRADES);
 
+    printf("\nSorted grades:\n");
+
     for (int i = 0; i < NUM_GRADES; i++)
     {
         letterGrade = calculateLetterGrade(grades[i]);
-        printf("%d - %c\n", grades[i], letterGrade);
+        printf("%3d - %c\n", grades[i], letterGrade);
     }
+
+    average = (float)(totalGrades / NUM_GRADES);
+    letterGrade = calculateLetterGrade(average);
+    printf("\nGrade average of the %d grades: %.1f - %c", NUM_GRADES, average, letterGrade);
 
     // return success code
     return 0;
