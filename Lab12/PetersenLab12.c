@@ -4,7 +4,7 @@
 #define NUM_GRADES 8
 
 // Function prototypes
-void sortAscending(float data[], int dataSize);
+void sortAscending(unsigned int data[], unsigned int dataSize);
 
 /***************************************************************
  * Author: Heather Petersen
@@ -20,7 +20,7 @@ void sortAscending(float data[], int dataSize);
 int main()
 {  
     // Declare and initialize variables    
-    int grades[NUM_GRADES] = {0};
+    unsigned int grades[NUM_GRADES] = {0};
 
     for (int i = 0; i < NUM_GRADES; i++)
     {
@@ -28,6 +28,7 @@ int main()
         scanf("%d", &grades[i]);
     }
 
+    sortAscending(grades, NUM_GRADES);
 
     for (int i = 0; i < NUM_GRADES; i++)
     {
@@ -38,7 +39,18 @@ int main()
     return 0;
 }
 
-void sortAscending(float data[], int dataSize)
+void sortAscending(unsigned int data[], unsigned int dataSize)
 {
-
+    for (unsigned int pass = 1; pass < dataSize; pass++)
+    {
+        for (unsigned int i = 0; i < dataSize - 1; i++)
+        {
+            if (data[i] > data[i + 1])
+            {
+                unsigned int temp = data[i];
+                data[i] = data[i + 1];
+                data[i + 1] = temp;
+            }
+        }
+    }
 }
